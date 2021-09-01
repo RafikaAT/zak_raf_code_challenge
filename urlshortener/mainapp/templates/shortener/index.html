@@ -1,0 +1,9 @@
+{% extends "shortener/base.html" %} {% block content %} {% if urls %}
+<ul>
+  {% for url in urls %}
+  <li><a>{{ url.long_url }}</a>, {{url.short_url}}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No URLS are available.</p>
+{% endif %} {% endblock content %}
