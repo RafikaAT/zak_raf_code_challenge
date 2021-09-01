@@ -3,6 +3,7 @@ import random
 import math
 # Try to get the value from the settings module
 
+
 def generate_url():
     alpha_characters = string.ascii_letters
     number_characters = string.digits
@@ -13,3 +14,4 @@ def generate_url():
         final_string += all_characters[rand_int]
         i = i + 1
     return final_string
+

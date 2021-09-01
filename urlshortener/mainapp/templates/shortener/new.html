@@ -1,6 +1,8 @@
-{% extends "shortener/base.html" %} {% block content %}
+{% extends "shortener/base.html" %} {% load crispy_forms_tags %} {% block content %}
 <form method="POST">
-  {% csrf_token %} {{ form }}
-  <input type="submit" value="Get your shortened URL" />
+  <section id="form_stuff">
+    {% csrf_token %} {{ form | crispy }}
+    <input type="submit" value="Get your shortened URL" />
+  </section>
 </form>
 {% endblock content %}
